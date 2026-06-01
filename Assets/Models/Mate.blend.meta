@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b4247d6c4392524aaed33b7e2f56c7c
+guid: 790f020b207b716458a12f3b536ac285
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,7 +9,9 @@ ModelImporter:
     400000: Bombilla
     400002: //RootNode
     400004: Mate
-    2100000: No Name
+    2100000: GrisBombilla
+    2100002: Madera
+    2100004: Gris
     2300000: Bombilla
     2300002: Mate
     3300000: Bombilla
