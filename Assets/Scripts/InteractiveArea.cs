@@ -5,15 +5,32 @@ using UnityEngine;
 public class InteractiveArea : MonoBehaviour
 {
 
-    public UIManager uiManager;
+    UIManager uiManagerScript;
+    Collectable CollectableScript;
 
-    void OnCollisionEnter(Collision col)
+
+    public bool isInteracting = false;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        if (col.gameObject.CompareTag("Collectable"))
-        {
-            Debug.Log("Hubo colision con un Collectable");
-            Destroy(col.gameObject);
-            uiManager.AddPointAndUpdateuiManager();
-        }
+        uiManagerScript = GameObject.FindObjectOfType<UIManager>();
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        Collectable CollectableScript = other.GetComponent<Collectable>();
+            if(CollectableScript != null)
+            {
+                uiManagerScript.ShowCartelColectados();
+            }
+    
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        uiManagerScript.HideCartelColectados();
     }
 }
+ 

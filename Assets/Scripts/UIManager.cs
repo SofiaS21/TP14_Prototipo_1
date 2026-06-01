@@ -7,17 +7,23 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
 
-public int score = 0;
+ public GameObject goCartelColectados;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        goCartelColectados = GameObject.FindGameObjectWithTag("Contador");
+        HideCartelColectados();
     }
 
-    public void AddPointAndUpdateScoreUI()
+    public void ShowCartelColectados()
     {
-        score ++;
-        Debug.Log("Puntaje: " + score);
+        goCartelColectados.SetActive(true);
     }
+
+    public void HideCartelColectados()
+    {
+        goCartelColectados.SetActive(false);
+    }
+
 }
