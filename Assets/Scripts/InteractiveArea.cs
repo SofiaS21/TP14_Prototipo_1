@@ -4,33 +4,24 @@ using UnityEngine;
 
 public class InteractiveArea : MonoBehaviour
 {
-
+    int score = 0;
     UIManager uiManagerScript;
-    Collectable CollectableScript;
 
+    void Awake ()
 
-    public bool isInteracting = false;
-
-    // Start is called before the first frame update
-    void Start()
     {
-        uiManagerScript = GameObject.FindObjectOfType<UIManager>();
+        uiManagerScript = FindObjectOfType<UIManager>();
     }
 
-
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter (Collider other)
     {
-        Collectable CollectableScript = other.GetComponent<Collectable>();
-            if(CollectableScript != null)
-            {
-                uiManagerScript.ShowCartelColectados();
-            }
-    
-    }
+        if(other.CompareTag("Collectable"))
+        {
+            score++; 
 
-    void OnTriggerExit(Collider other)
-    {
-        uiManagerScript.HideCartelColectados();
+            uiManagerScript.UpdateScore(Score);
+
+            Destroy(other.gameObject);
+        }
     }
 }
- 

@@ -1,23 +1,15 @@
 fileFormatVersion: 2
-guid: 4b4247d6c4392524aaed33b7e2f56c7c
+guid: 0b73f26455dced949aa357ffcc29a66c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bombilla
-    100002: //RootNode
-    100004: Mate
-    400000: Bombilla
-    400002: //RootNode
-    400004: Mate
-    2100000: GrisBombilla
-    2100002: Madera
-    2100004: Gris
-    2300000: Bombilla
-    2300002: Mate
-    3300000: Bombilla
-    3300002: Mate
-    4300000: Bombilla
-    4300002: Mate
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2100002: Gris Oscuro
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Mesa
   externalObjects: {}
   materials:
     importMaterials: 1

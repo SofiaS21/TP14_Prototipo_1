@@ -1,29 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-
 
 public class UIManager : MonoBehaviour
 {
+  
+    public TextMeshProUGUI contadorTexto;
+    public TextMeshProUGUI timerTexto;
 
- public GameObject goCartelColectados;
-
-    // Start is called before the first frame update
     void Start()
     {
-        goCartelColectados = GameObject.FindGameObjectWithTag("Contador");
-        HideCartelColectados();
+        puntajeTexto.Text = "Score: 0";
     }
 
-    public void ShowCartelColectados()
+    public void UpdateScore (int score)
     {
-        goCartelColectados.SetActive(true);
+        puntajeTexto.Text = "Score:" + score + score;
     }
 
-    public void HideCartelColectados()
+    public void UpdateTimer(float timer)
     {
-        goCartelColectados.SetActive(false);
+        timerTexto.text = "timer: 00:" + Mathf.Ceil(timer);
     }
 
 }
