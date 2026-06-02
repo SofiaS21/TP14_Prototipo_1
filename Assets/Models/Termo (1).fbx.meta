@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: d5f4275c2471ab841b81683da9f7f717
+guid: d2a0f59a6dfe9b04bb419d4fffa2adec
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Material
+    2100002: Verda musgo
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder
