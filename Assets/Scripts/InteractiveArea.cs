@@ -20,7 +20,7 @@ public class InteractiveArea : MonoBehaviour
         {
             score++; 
 
-            uiManagerScript.UpdateScore(Score);
+            uiManagerScript.UpdateScore(score);
 
             Destroy(other.gameObject);
         }

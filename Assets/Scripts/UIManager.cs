@@ -12,12 +12,12 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        contadorTexto.Text = "Score: 0";
+        contadorTexto.text = "Score: 0";
     }
 
     public void UpdateScore (int score)
     {
-        contadorTexto.Text = "Score:" + score + score;
+        contadorTexto.text = "Score:" + score;
     }
 
     public void UpdateTimer(float timer)
