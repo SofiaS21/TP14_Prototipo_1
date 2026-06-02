@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  public float timer = 60f;
+
+    public float timer = 60f;
+    public TextMeshProUGUI timerTexto;
+
 
     UIManager uiManagerScript;
 
@@ -15,8 +18,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltatime;
-        uiManagerScript.UpdateTimer(timer);
+        timer -= Time.deltaTime;
+        uiManagerScript.UpdateTimer(timerTexto);
     }
 }
-}
+

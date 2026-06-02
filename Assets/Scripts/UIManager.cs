@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -10,12 +12,12 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        puntajeTexto.Text = "Score: 0";
+        contadorTexto.Text = "Score: 0";
     }
 
     public void UpdateScore (int score)
     {
-        puntajeTexto.Text = "Score:" + score + score;
+        contadorTexto.Text = "Score:" + score + score;
     }
 
     public void UpdateTimer(float timer)
