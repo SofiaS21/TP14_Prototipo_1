@@ -18,7 +18,7 @@ public class InteractiveArea : MonoBehaviour
     {
         if(other.CompareTag("Collectable"))
         {
-            score++; 
+            score += 1;
 
             uiManagerScript.UpdateScore(score);
 

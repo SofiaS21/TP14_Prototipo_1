@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore (int score)
     {
-        contadorTexto.text = "Score:" + score;
+        contadorTexto.text = "Score: " + score;
     }
 
     public void UpdateTimer(float timer)
