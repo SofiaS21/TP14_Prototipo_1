@@ -26,8 +26,9 @@ public class GameManager : MonoBehaviour
     {
         if (juegoTerminado)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
