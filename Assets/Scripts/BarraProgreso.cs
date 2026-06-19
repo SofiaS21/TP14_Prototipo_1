@@ -21,7 +21,7 @@ public class BarraProgreso : MonoBehaviour
 
     void ActualizarValorBarra (float valorMax, float valorAct){
         float porcentaje;
-        porcentaje = valorAct / valorMax
+        porcentaje = valorAct / valorMax;
         Barra.value = porcentaje;
     }
 

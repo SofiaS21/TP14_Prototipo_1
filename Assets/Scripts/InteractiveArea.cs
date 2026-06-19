@@ -28,7 +28,7 @@ public class InteractiveArea : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            if (score >= 11)
+            if (score >= 14)
             {
                 uiManagerScript.ShowWonPanel();
 
