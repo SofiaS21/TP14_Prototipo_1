@@ -20,22 +20,44 @@ public class InteractiveArea : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectable"))
-        {
-            score++;
+        Collectable objeto = other.GetComponent<Collectable>();
 
-            uiManagerScript.UpdateScore(score);
-
-            Destroy(other.gameObject);
-
-            if (score >= 14)
+            if (other.CompareTag("Collectable"))
             {
-                uiManagerScript.ShowWonPanel();
+                score++;
 
-                gameManagerScript.juegoTerminado = true;
+                if (objeto != null)
+                {
+                    uiManagerScript.MostrarObjeto(objeto.icono);
+                }
 
-                Time.timeScale = 0;
+                uiManagerScript.UpdateScore(score);
+
+                Destroy(other.gameObject);
             }
-        }
+
+            if (other.CompareTag("DoubleCollectable"))
+            {
+                score += 2;
+
+                if (objeto != null)
+                {
+                    uiManagerScript.MostrarObjeto(objeto.icono);
+                }
+
+                uiManagerScript.UpdateScore(score);
+
+                Destroy(other.gameObject);
+            }
+
+                if (score >= 14)
+                {
+                    uiManagerScript.ShowWonPanel();
+
+                    gameManagerScript.juegoTerminado = true;
+
+                    Time.timeScale = 0;
+                }
     }
 }
+
