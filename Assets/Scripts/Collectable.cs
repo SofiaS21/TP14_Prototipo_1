@@ -5,8 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
 
-    public Sprite icono;
-
+    public GameObject previewPrefab;
         public int puntos = 1;
 
 

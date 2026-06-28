@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67edde2dec12cc74c9d0e84e1edb70ff
+guid: 1a8d18578ff12ff4580a9381a6ac5d8a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -7,6 +7,7 @@ ModelImporter:
     400000: //RootNode
     2100000: Azul
     2100002: Gris
+    2100004: Negro
     2300000: //RootNode
     3300000: //RootNode
     4300000: Silla
