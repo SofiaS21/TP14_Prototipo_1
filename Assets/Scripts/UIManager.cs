@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-
 
 public class UIManager : MonoBehaviour
 {
@@ -13,8 +11,6 @@ public class UIManager : MonoBehaviour
     
     public GameObject gameOverPanel;
     public GameObject gameWonPanel; 
-
-    public Image imagenObjeto;
     
     void Start()
     {
@@ -42,12 +38,6 @@ public class UIManager : MonoBehaviour
     public void ShowWonPanel()
     {
         gameWonPanel.SetActive(true);
-    }
-
-    public void MostrarObjeto(Sprite sprite)
-    {
-        imagenObjeto.sprite = sprite;
-        imagenObjeto.gameObject.SetActive(true);
     }
 
 }

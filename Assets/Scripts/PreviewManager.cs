@@ -14,7 +14,11 @@ public class PreviewManager : MonoBehaviour
                 Destroy(objetoActual);
             }
 
-            objetoActual = Instantiate(prefab, spawnPreview.position, Quaternion.identity);
+objetoActual = Instantiate(prefab);
+
+objetoActual.transform.position = spawnPreview.position;
+objetoActual.transform.rotation = spawnPreview.rotation;
+objetoActual.transform.localScale = Vector3.one * 0.2f;
 
             objetoActual.transform.SetParent(spawnPreview);
 

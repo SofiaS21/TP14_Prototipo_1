@@ -5,50 +5,39 @@ using TMPro;
 
 public class InteractiveArea : MonoBehaviour
 {
-    int score = 0;
+
     UIManager uiManagerScript;
     GameManager gameManagerScript;
+    PreviewManager previewManager;
+    
     public GameObject gameWonPanel; 
-
+    int score = 0;
 
     void Awake ()
 
     {
         uiManagerScript = FindObjectOfType<UIManager>();
         gameManagerScript = FindObjectOfType<GameManager>();
+        previewManager = FindObjectOfType<PreviewManager>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         Collectable objeto = other.GetComponent<Collectable>();
 
-            if (other.CompareTag("Collectable"))
-            {
-                score++;
+            Debug.Log("Entró al Collectable");
 
-                if (objeto != null)
-                {
-                    uiManagerScript.MostrarObjeto(objeto.icono);
-                }
+if (objeto == null)
+{
+    Debug.Log("OBJETO ES NULL");
+}
+else
+{
+    Debug.Log("Preview: " + objeto.previewPrefab);
 
-                uiManagerScript.UpdateScore(score);
+    previewManager.MostrarObjeto(objeto.previewPrefab);
+}
 
-                Destroy(other.gameObject);
-            }
-
-            if (other.CompareTag("DoubleCollectable"))
-            {
-                score += 2;
-
-                if (objeto != null)
-                {
-                    uiManagerScript.MostrarObjeto(objeto.icono);
-                }
-
-                uiManagerScript.UpdateScore(score);
-
-                Destroy(other.gameObject);
-            }
 
                 if (score >= 14)
                 {
